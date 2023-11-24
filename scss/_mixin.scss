@@ -1,0 +1,26 @@
+@use "variables" as var;
+
+@mixin btn($width: 205px, $bcg: var.$primary-color, $borr: 9px, $padding: 10px 20px) {
+  color: var.$white;
+  max-width: $width;
+  padding: $padding;
+  border-radius: $borr;
+  background-color: $bcg;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+@mixin columns($columns: 2, $gap: 97px, $j-items: center, $fr: 1fr, $justify: space-between ) {
+  display: grid;
+  justify-items: $j-items;
+  gap: $gap;
+  grid-template-columns: repeat($columns, $fr);
+  justify-content: $justify;
+}
+
+@mixin d-flex($j-content: space-between, $a-items: center, $gap: 0) {
+  display: flex;
+  justify-content: $j-content;
+  align-items: $a-items;
+  gap: $gap;
+}

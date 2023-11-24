@@ -1,0 +1,42 @@
+@use "function" as func;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+*,
+* ::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: func.container(1400, 115, 20);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+textarea {
+  border: none;
+}

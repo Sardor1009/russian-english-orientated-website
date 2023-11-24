@@ -1,0 +1,355 @@
+@use "./variables" as var;
+@use "./mixin" as mxn;
+
+body {
+  background-color: var.$home-bc;
+}
+#home {
+  padding-top: 180px;
+  padding-bottom: 90px;
+}
+.home {
+  @include mxn.d-flex;
+  @media (max-width: 1120px) {
+    @include mxn.columns($columns: 1, $gap: 50px);
+    justify-items: center;
+  }
+  &__row__button {
+    @media (max-width: 500px) {
+      @include mxn.columns($columns: 1, $gap: 10px);
+      text-align: center;
+    }
+  }
+
+  &__row__button button:nth-child(1) {
+    @include mxn.btn($bcg: var.$secondary_color, $borr: 250px, $width: 241px);
+    @media (max-width: 400px) {
+      font-weight: 400;
+      padding: 5px 9px;
+    }
+  }
+  &__row__button button:nth-child(2) {
+    @include mxn.btn($bcg: var.$secondary_color, $borr: 250px, $width: 114px);
+  }
+
+  &__row__button button:nth-child(3) {
+    @include mxn.btn($bcg: var.$secondary_color, $borr: 250px, $width: 141px);
+  }
+
+  &__row__right {
+    h3,
+    h2,
+    p {
+      color: var.$header-text;
+      font-family: Manrope;
+      font-size: 45px;
+      font-weight: 800;
+      line-height: 65px;
+    }
+    h2 {
+      font-size: 55px;
+      font-weight: 500;
+      line-height: 65px;
+      text-transform: uppercase;
+      @media (max-width: 400px) {
+        font-size: 40px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      margin-top: 14px;
+      margin-bottom: 29px;
+    }
+  }
+  &__row__left {
+    max-width: 573px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ---------middle ------------////
+
+.middle {
+  border-radius: 20px;
+  background: var.$white;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px 0 56px 50px;
+  padding-bottom: 76px;
+  &__row {
+    @include mxn.columns(
+      $columns: 4,
+      $fr: auto,
+      $justify: space-between,
+      $gap: 0
+    );
+    @media (max-width: 1000px) {
+      @include mxn.columns($columns: 2, $gap: 20px);
+    }
+    @media (max-width: 660px) {
+      @include mxn.columns($columns: 1);
+    }
+  }
+
+  h2 {
+    color: var.$header-text;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+    @media (max-width: 400px) {
+      font-size: 30px;
+    }
+  }
+  &__row__card {
+    border-right: 1px solid var.$border-color;
+    border-bottom: none;
+    padding-right: 63px;
+    @media (max-width: 1000px) {
+      border-right: none;
+      border-bottom: 1px solid var.$border-color;
+    }
+    @media (max-width: 300px) {
+      padding-right: 9px;
+    }
+    &__4 {
+      border-right: none;
+    }
+    h4,
+    p {
+      max-width: 223px;
+      color: var.$primary-color;
+      font-size: 40px;
+      font-weight: 800;
+    }
+    p {
+      color: var.$header-text;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 3px;
+    }
+    h4 {
+      @media (max-width: 400px) {
+        font-size: 30px;
+      }
+    }
+  }
+}
+#middle .middle__row__digit {
+  color: var.$primary-color;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 48px;
+  span {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 48px;
+  }
+}
+
+// ------price --started-----
+
+.price {
+  padding-bottom: 92px;
+  h2 {
+    color: var.$header-text;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 41px;
+  }
+  &__row {
+    @include mxn.columns($columns: 5, $gap: 18px, $fr: 1fr);
+    &__padding {
+      padding-top: 30px;
+    }
+    @media (max-width: 1210px) {
+      @include mxn.columns(
+        $columns: 3,
+        $justify: center,
+        $fr: auto,
+        $gap: 50px
+      );
+      justify-items: center;
+    }
+    @media (max-width: 800px) {
+      @include mxn.columns(
+        $columns: 2,
+        $justify: center,
+        $fr: auto,
+        $gap: 30px
+      );
+    }
+    @media (max-width: 510px) {
+      @include mxn.columns(
+        $columns: 1,
+        $justify: center,
+        $fr: auto,
+        $gap: 30px
+      );
+    }
+  }
+
+  &__row__icon {
+    display: flex;
+    gap: 6px;
+    p {
+      color: var.$header-text;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__row__card {
+    h3 {
+      padding-top: 11px;
+      max-width: 170px;
+      color: var.$white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 26px;
+      text-transform: uppercase;
+      line-clamp: 2;
+    }
+    button {
+      margin-top: 20px;
+      @include mxn.btn($padding: 14px 52px);
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h4 {
+      margin-top: 105px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 24px;
+      color: var.$primary-color;
+      padding: 11px 30px 15px 0;
+      border-top: 1px solid var.$border-top;
+      span {
+        color: var.$header-text;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 5px;
+      }
+    }
+    &__top {
+      background: linear-gradient(var.$secondary_color 20%, var.$white 20%);
+      padding-left: 16px;
+      padding-right: 4px;
+      border-radius: 15px;
+    }
+    button {
+      color: var.$white;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+  }
+  &__six {
+    padding: 25px;
+  }
+}
+
+// --------consult ------
+// #consult {
+// }
+
+.consult {
+  padding-bottom: 126px; 
+  @include mxn.columns($columns: 2, $gap: 30px);
+  @media (max-width: 1090px) {
+    @include mxn.columns ($columns: 1)
+  }
+
+  h4,
+  p {
+    max-width: 529px;
+    color: var.$header-text;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  p {
+    color: var.$header-text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 22px 0;
+    @media (max-width: 500px){
+      font-size: 10px;
+      line-height: 1.2;
+    }
+  }
+  h4 {
+    @media (max-width: 500px) {
+      font-size: 25px;
+    }
+  }
+  &__right__button {
+    max-width: 570px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    input::placeholder {
+      color: var.$header-text;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+      @media (max-width: 550px){
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+  textarea,
+  &__input {
+    border-radius: 7px;
+    background: var.$white;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+  }
+  &__input {
+    width: 100%;
+    padding: 16px;
+    @media(max-width: 550px){
+      padding: 2px 0 5px 5px;
+    }
+     
+  }
+  .textarea {
+    max-width: 570px;
+  }
+  textarea {
+    max-width: 570px;
+    width: 100%;
+    height: 180px;
+    resize: none;
+    font-size: 16px;
+    padding: 16px 0 0 16px;
+    outline: none;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .checkbox{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__right__last {
+    @include mxn.btn($padding: 14px 54px);
+  }
+  &__row__left {
+    max-width: 570px;
+  img {
+    width: 100%;
+  }
+  }
+}

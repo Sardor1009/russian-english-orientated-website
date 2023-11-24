@@ -1,0 +1,104 @@
+@use "mixin" as mxn;
+@use "variables" as var;
+
+.nav__btn {
+  @include mxn.btn;
+
+  @media (max-width: 950px) {
+    padding: 10px 20px;
+  }
+  @media (max-width: 500px) {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  @media (max-width: 408px) {
+    display: none;
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var.$white;
+  padding: 15px 0;
+}
+
+.nav {
+  @include mxn.d-flex;
+
+  img {
+    @media (max-width: 950px) {
+      max-width: 170px;
+    }
+    @media (max-width: 500px) {
+      max-width: 150px;
+    }
+  }
+  &__list {
+    &__title {
+      color: var.$header-text ;
+      font-family: Manrope;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px; 
+    }
+    &__things {
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+    @include mxn.d-flex(space-between, center, 20px);
+  }
+  &__buttons {
+    @include mxn.d_flex($gap: 20px);
+  }
+}
+
+#navbar-responsive {
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  left: calc(-100% - 40px);
+  @include mxn.d-flex($j-content: center);
+  flex-direction: column;
+  transition: 1s;
+
+  li {
+    width: calc(100vw - 80px);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    a {
+      color: var.$white;
+      font-weight: 800;
+    }
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: var.$secondary_color;
+  }
+  li:hover a {
+    color: var.$primary-color;
+  }
+}
+#navbar-open {
+  display: none;
+  @media (max-width: 1000px) {
+    display: inline-block;
+  }
+}
+
+#navbar-close {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+}
+#navbar-close:hover {
+  padding: 10px 15px;
+  background-color: var.$secondary_color;
+  transition: 0.1s;
+  border-radius: 10px;
+}
