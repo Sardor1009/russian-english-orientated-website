@@ -1138,6 +1138,6 @@ footer {
   color: #fff;
 }
 
-.dark header *, .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder, .dark textarea::placeholder, .dark .about__row *, .dark .footer * {
+.dark header *, .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder, .dark textarea::placeholder, .dark .about__row *, .dark .footer *, .dark .about h2 {
   color: #fff;
 }
