@@ -78,7 +78,7 @@ body {
   background: var.$white;
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
   padding: 40px 0 56px 50px;
-  padding-bottom: 76px;
+
   &__row {
     @include mxn.columns(
       $columns: 4,
@@ -155,7 +155,7 @@ body {
 // ------price --started-----
 
 .price {
-  padding-bottom: 92px;
+  padding-top: 96px;
   h2 {
     color: var.$header-text;
     font-size: 38px;
@@ -258,14 +258,14 @@ body {
 }
 
 // --------consult ------
-// #consult {
-// }
+#consult {
+  padding-top: 96px;
+}
 
 .consult {
-  padding-bottom: 126px; 
   @include mxn.columns($columns: 2, $gap: 30px);
   @media (max-width: 1090px) {
-    @include mxn.columns ($columns: 1)
+    @include mxn.columns($columns: 1);
   }
 
   h4,
@@ -282,7 +282,7 @@ body {
     font-weight: 400;
     line-height: 26px;
     margin: 22px 0;
-    @media (max-width: 500px){
+    @media (max-width: 500px) {
       font-size: 10px;
       line-height: 1.2;
     }
@@ -302,7 +302,7 @@ body {
       font-size: 16px;
       font-weight: 300;
       line-height: 26px;
-      @media (max-width: 550px){
+      @media (max-width: 550px) {
         font-size: 10px;
         line-height: 16px;
       }
@@ -317,10 +317,9 @@ body {
   &__input {
     width: 100%;
     padding: 16px;
-    @media(max-width: 550px){
+    @media (max-width: 550px) {
       padding: 9px 0 12px 12px;
     }
-     
   }
   .textarea {
     max-width: 570px;
@@ -338,7 +337,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    .checkbox{
+    .checkbox {
       width: 20px;
       height: 20px;
     }
@@ -348,8 +347,275 @@ body {
   }
   &__row__left {
     max-width: 570px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// -----------consult___--contact endded==-----=-
+#backtop {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  font-size: 35px;
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+  padding: 5px;
+  opacity: 0;
+  transition: 1s;
+  @media (max-width: 700px) {
+    font-size: 25px;
+  }
+}
+
+#backtop.backtop-show {
+  opacity: 1;
+  right: 40px;
+  z-index: 22;
+}
+
+.navbar-shrink {
+  padding-bottom: 5px;
+  transition: 1s;
+  box-shadow: 0 0 5px black;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var.$loading;
+  opacity: 1;
+  transition: 1s;
+  z-index: 12;
+}
+#loading.loading-none {
+  z-index: -1;
+  opacity: 0;
+}
+
+@keyframes ldio-zmwlyxd1et {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ldio-zmwlyxd1et div {
+  position: absolute;
+  animation: ldio-zmwlyxd1et 1s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 8.4px 0 0 #1d3f72;
+  transform-origin: 80px 84.2px;
+}
+.loadingio-spinner-eclipse-r0zj0c6dy9i {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: #f1f2f3;
+}
+.ldio-zmwlyxd1et {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-zmwlyxd1et div {
+  box-sizing: content-box;
+}
+
+//  ------about ------------
+
+#about {
+  padding-top: 112px;
+  padding-bottom: 90px;
+}
+.about {
+  h2 {
+    color: var.$header-text;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 41px;
+  }
+  h5,
+  h4 {
+    color: var.$header-text;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+  h5 {
+    margin-top: 45px;
+    margin-bottom: 10px;
+  }
+  &__google {
+    max-width: 100px;
+  }
+
+  &__yandex {
+    max-width: 150px;
+  }
+
+  &__row {
+    padding: 8px 34px 25px 23px;
+    max-width: 570px;
+    border-radius: 15px;
+    background-color: var.$white;
+    z-index: 0;
+    @media (max-width: 1120px) {
+      max-width: 1100px;
+    }
+    .alibobo {
+      max-width: 150px;
+    }
+    .macy {
+      max-width: 225px;
+      padding-top: 33px;
+      padding-bottom: 24px;
+    }
+    p {
+      max-width: 508px;
+    }
+    &__desc {
+      max-width: 185px;
+    }
+    &__desc:nth-child(2) {
+      max-width: 94px;
+    }
+    &__image {
+      max-width: 280px;
+      @include mxn.d-flex($gap: 16px, $j-content: start);
+    }
+  }
+  &__row__box {
+    @include mxn.d-flex($gap: 34px);
+  }
+  &__row__desc {
+    max-width: 185px;
+  }
+}
+.owl_theme {
+  @include mxn.columns($columns: 2, $fr: auto, $gap: 34);
+}
+
+#owl-carousel .owl-next,
+#owl-carousel .owl-prev {
+  position: absolute;
+  background-color: var.$border-color;
+  width: 50px;
+  height: 40px;
+  padding-top: 40px;
+  border-radius: 10px;
+  top: 190px;
+}
+
+#owl-carousel .owl-next {
+  right: 0;
+}
+
+#owl-carousel .owl-prev {
+  left: 0;
+}
+
+#owl-carousel .owl-dot span {
+  width: 40px;
+  height: 8px;
+  background-color: var.$border-color;
+  border-radius: 4px;
+  transition: 0.8s;
+  @media (max-width: 700px) {
+    width: 25px;
+    height: 7px;
+  }
+}
+
+#owl-carousel .owl-dot.active span {
+  background-color: var.$header-text;
+  width: 50px;
+  @media (max-width: 700px) {
+    width: 30px;
+  }
+}
+//  foooter started--------- welcome to footer
+footer {
+  background: linear-gradient(var.$white 0% 90%, var.$black 90%);
+}
+.footer {
+  &__row__card button {
+    @include mxn.btn($padding: 14px 38px);
+    margin-top: 22px;
+    @media (max-width: 500px) {
+      padding: 8px 20px;
+    }
+  }
   img {
+    max-width: 325px;
     width: 100%;
   }
+  &__row {
+    padding-top: 53px;
+    padding-bottom: 72px;
+    @include mxn.columns($columns:3, $gap: 0);
+    @media (max-width: 670px){
+      @include mxn.columns($columns: 2, $gap: 50px, $j-items: center)
+    }
+    @media (max-width: 540px){
+      @include mxn.columns($columns: 1, $gap: 50px, $j-items: start);
+      margin-left: 50px;
+    }
+    @media (max-width: 350px) {
+      margin-left: 10px;
+    }
+    &__third {
+      margin-right: 100px;
+      @media (max-width: 900px){
+        margin-right: 0;
+      }
+      
+    }
+  }
+  &__p {
+    text-decoration: underline;
+    color: var.$header-text;
+  }
+  a {
+    color: var.$header-text;
+  }
+  ul h4 {
+    color: var.$header-text;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  &__end {
+    text-align: center;
+    color: var.$white;
+    line-height: 36px;
+  }
+
+  li {
+    line-height: 36px;
   }
 }

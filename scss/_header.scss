@@ -15,7 +15,11 @@
     display: none;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 header {
+  z-index: 12;
   position: fixed;
   width: 100%;
   background-color: var.$white;
@@ -64,6 +68,7 @@ header {
   @include mxn.d-flex($j-content: center);
   flex-direction: column;
   transition: 1s;
+  z-index: 12;
 
   li {
     width: calc(100vw - 80px);

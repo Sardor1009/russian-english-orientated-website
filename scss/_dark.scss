@@ -1,13 +1,13 @@
 @use "../scss/variables" as var;
 
- .dark #home, .dark #price, .dark #middle, .dark #consult{
+ .dark #home, .dark #price, .dark #middle, .dark #consult, .dark #about {
     background-color: var.$black;
     transition: 1.4s;
 }
-.dark .middle, .dark header, .dark #price .price__row__card__top, .dark .consult__input, .dark textarea {
+.dark .middle, .dark header, .dark #price .price__row__card__top, .dark .consult__input, .dark textarea, .dark .about__row {
     background: linear-gradient( rgb(88, 86, 86), var.$header-text) 
 }
 
-.dark header * , .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder,.dark textarea::placeholder{
+.dark header * , .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder,.dark textarea::placeholder, .dark .about__row *{
     color: var.$white;
 }
