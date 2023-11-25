@@ -70,7 +70,7 @@ function shrink() {
 
 const loading = document.getElementById("loading");
 
-const loadingDuration =10; // 2s
+const loadingDuration =2110; // 2s
 
 setTimeout(() => {
   loading.classList.add('loading-none');
