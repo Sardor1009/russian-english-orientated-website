@@ -264,7 +264,7 @@ body {
   font-weight: 600;
   line-height: 26px;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .home__row__button button:nth-child(1) {
     font-weight: 400;
     padding: 5px 9px;
@@ -280,6 +280,12 @@ body {
   font-weight: 600;
   line-height: 26px;
 }
+@media (max-width: 500px) {
+  .home__row__button button:nth-child(2) {
+    font-weight: 400;
+    padding: 5px 9px;
+  }
+}
 .home__row__button button:nth-child(3) {
   color: #fff;
   max-width: 141px;
@@ -290,6 +296,12 @@ body {
   font-weight: 600;
   line-height: 26px;
 }
+@media (max-width: 500px) {
+  .home__row__button button:nth-child(3) {
+    font-weight: 400;
+    padding: 5px 9px;
+  }
+}
 .home__row__right h3,
 .home__row__right h2,
 .home__row__right p {
@@ -299,16 +311,18 @@ body {
   font-weight: 800;
   line-height: 65px;
 }
+@media (max-width: 500px) {
+  .home__row__right h3,
+  .home__row__right h2,
+  .home__row__right p {
+    font-size: 25px !important;
+  }
+}
 .home__row__right h2 {
   font-size: 55px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 65px;
   text-transform: uppercase;
-}
-@media (max-width: 400px) {
-  .home__row__right h2 {
-    font-size: 40px;
-  }
 }
 .home__row__right p {
   font-size: 16px;
@@ -372,7 +386,7 @@ body {
 }
 @media (max-width: 400px) {
   .middle h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .middle__row__card {
@@ -435,6 +449,11 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 41px;
+}
+@media (max-width: 500px) {
+  .price h2 {
+    font-size: 25px;
+  }
 }
 .price__row {
   display: grid;
@@ -861,6 +880,11 @@ body {
   text-transform: uppercase;
   margin-bottom: 41px;
 }
+@media (max-width: 500px) {
+  .about h2 {
+    font-size: 25px;
+  }
+}
 .about h5,
 .about h4 {
   color: #333;
@@ -1087,7 +1111,7 @@ footer {
   line-height: 36px;
 }
 
-.dark #home, .dark #price, .dark #middle, .dark #consult, .dark #about {
+.dark #home, .dark #price, .dark #middle, .dark #consult, .dark #about, .dark .footer {
   background-color: black;
   -webkit-transition: 1.4s;
   transition: 1.4s;
@@ -1114,6 +1138,6 @@ footer {
   color: #fff;
 }
 
-.dark header *, .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder, .dark textarea::placeholder, .dark .about__row * {
+.dark header *, .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder, .dark textarea::placeholder, .dark .about__row *, .dark .footer * {
   color: #fff;
 }

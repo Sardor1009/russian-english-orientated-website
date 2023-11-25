@@ -1,6 +1,6 @@
 @use "../scss/variables" as var;
 
- .dark #home, .dark #price, .dark #middle, .dark #consult, .dark #about {
+ .dark #home, .dark #price, .dark #middle, .dark #consult, .dark #about , .dark .footer {
     background-color: var.$black;
     transition: 1.4s;
 }
@@ -8,6 +8,6 @@
     background: linear-gradient( rgb(88, 86, 86), var.$header-text) 
 }
 
-.dark header * , .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder,.dark textarea::placeholder, .dark .about__row *{
+.dark header * , .dark #home *, .dark #price *, .dark .middle *, .dark #consult *, .dark .consult__input::placeholder,.dark textarea::placeholder, .dark .about__row *, .dark .footer *{
     color: var.$white;
 }
