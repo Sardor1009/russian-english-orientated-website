@@ -35,7 +35,6 @@ body {
       padding: 5px 9px;
     }
   }
-  
 
   &__row__button button:nth-child(3) {
     @include mxn.btn($bcg: var.$secondary_color, $borr: 250px, $width: 141px);
@@ -44,7 +43,6 @@ body {
       padding: 5px 9px;
     }
   }
-  
 
   &__row__right {
     h3,
@@ -55,7 +53,7 @@ body {
       font-size: 45px;
       font-weight: 800;
       line-height: 65px;
-      @media  (max-width: 500px){
+      @media (max-width: 500px) {
         font-size: 25px !important;
       }
     }
@@ -64,7 +62,6 @@ body {
       font-weight: 400;
       line-height: 65px;
       text-transform: uppercase;
-      
     }
     p {
       font-size: 16px;
@@ -173,7 +170,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 41px;
-    @media  (max-width: 500px){
+    @media (max-width: 500px) {
       font-size: 25px;
     }
   }
@@ -468,7 +465,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 41px;
-    @media  (max-width: 500px){
+    @media (max-width: 500px) {
       font-size: 25px;
     }
   }
@@ -493,11 +490,17 @@ body {
   }
 
   &__row {
+    background: linear-gradient(
+      var.$white 0% 44%,
+      var.$home-bc 44% 75%,
+      var.$white 75%
+    );
     padding: 8px 34px 25px 23px;
     max-width: 570px;
     border-radius: 15px;
     background-color: var.$white;
     z-index: 0;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
     @media (max-width: 1120px) {
       max-width: 1100px;
     }
@@ -525,6 +528,9 @@ body {
   }
   &__row__box {
     @include mxn.d-flex($gap: 34px);
+    @media (max-width: 700px) {
+      @include mxn.d-flex($gap: 15px);
+    }
   }
   &__row__desc {
     max-width: 185px;
@@ -591,11 +597,11 @@ footer {
   &__row {
     padding-top: 53px;
     padding-bottom: 72px;
-    @include mxn.columns($columns:3, $gap: 0);
-    @media (max-width: 670px){
-      @include mxn.columns($columns: 2, $gap: 50px, $j-items: center)
+    @include mxn.columns($columns: 3, $gap: 0);
+    @media (max-width: 670px) {
+      @include mxn.columns($columns: 2, $gap: 50px, $j-items: center);
     }
-    @media (max-width: 540px){
+    @media (max-width: 540px) {
       @include mxn.columns($columns: 1, $gap: 50px, $j-items: start);
       margin-left: 50px;
     }
@@ -604,10 +610,9 @@ footer {
     }
     &__third {
       margin-right: 100px;
-      @media (max-width: 900px){
+      @media (max-width: 900px) {
         margin-right: 0;
       }
-      
     }
   }
   &__p {

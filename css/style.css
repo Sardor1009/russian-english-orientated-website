@@ -903,11 +903,15 @@ body {
   max-width: 150px;
 }
 .about__row {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(44%, #F7F6FF), color-stop(75%, #fff));
+  background: linear-gradient(#fff 0% 44%, #F7F6FF 44% 75%, #fff 75%);
   padding: 8px 34px 25px 23px;
   max-width: 570px;
   border-radius: 15px;
   background-color: #fff;
   z-index: 0;
+  -webkit-box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 1120px) {
   .about__row {
@@ -955,6 +959,20 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 34px;
+}
+@media (max-width: 700px) {
+  .about__row__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
 }
 .about__row__desc {
   max-width: 185px;
