@@ -770,7 +770,7 @@ body {
 
 #backtop.backtop-show {
   opacity: 1;
-  top: calc(100vh - 200px);
+  top: calc(100vh - 150px);
   right: 40px;
   z-index: 22;
 }
