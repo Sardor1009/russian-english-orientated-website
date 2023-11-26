@@ -79,7 +79,7 @@ header {
   position: fixed;
   width: 100%;
   background-color: #fff;
-  padding: 15px 0;
+  padding: 5px 0 15px 0;
 }
 
 .nav {
@@ -93,6 +93,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   gap: 0;
+}
+.nav img {
+  max-width: 180px;
 }
 @media (max-width: 950px) {
   .nav img {

@@ -23,13 +23,14 @@ header {
   position: fixed;
   width: 100%;
   background-color: var.$white;
-  padding: 15px 0;
+  padding: 5px 0 15px 0;
 }
 
 .nav {
   @include mxn.d-flex;
 
   img {
+    max-width: 180px;
     @media (max-width: 950px) {
       max-width: 170px;
     }
